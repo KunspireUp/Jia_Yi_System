@@ -1,0 +1,95 @@
+package yangsenxi.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import yangsenxi.dao.CURE_Mysql;
+
+/**
+ * Servlet implementation class FindStudentServlet2
+ */
+public class FindStudentServlet3 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public FindStudentServlet3() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String sno;
+		String name;
+		String classz;
+		String chinese;
+		String math;
+		String english;
+		String physics;
+		String chemistry;
+
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+
+		HttpSession session = request.getSession();
+		String user_id = (String)session.getAttribute("ss");
+		//System.out.println(user_id);
+		// 执行查询的 SQL 语句
+		List<String> list = new ArrayList<>();
+		list = CURE_Mysql.findStudent(user_id);
+		if(list.isEmpty()) {
+			request.getRequestDispatcher("/user/student.jsp").forward(request, response);//再次跳转到当前界面，将数据显示到 JSP 页面上面
+		}
+		//System.out.println(list);
+
+		sno = list.get(0);
+		name = list.get(1);
+		classz = list.get(2);
+		chinese = list.get(3);
+		math = list.get(4);
+		english = list.get(5);
+		physics = list.get(6);
+		chemistry = list.get(7);
+
+		/*System.out.println(sno);
+		System.out.println(name);
+		System.out.println(classz);
+		System.out.println(chinese);
+		System.out.println(math);
+		System.out.println(english);
+		System.out.println(physics);
+		System.out.println(chemistry);*/
+
+		session.setAttribute("st_sno", sno);
+		session.setAttribute("st_name", name);
+		session.setAttribute("st_classz", classz);
+		session.setAttribute("st_chinese", chinese);
+		session.setAttribute("st_math", math);
+		session.setAttribute("st_english", english);
+		session.setAttribute("st_physics", physics);
+		session.setAttribute("st_chemistry", chemistry);
+
+
+		request.getRequestDispatcher("/user/studentinfo.jsp").forward(request, response);//再次跳转到当前界面，将数据显示到 JSP 页面上面
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

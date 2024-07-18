@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>Jia_Yi_System</display-name>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <description></description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>ChangePwdServlet</display-name>
+        <servlet-name>ChangePwdServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.ChangePwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePwdServlet</servlet-name>
+        <url-pattern>/ChangePwdServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>FindPasswordServlet</display-name>
+        <servlet-name>FindPasswordServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.FindPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindPasswordServlet</servlet-name>
+        <url-pattern>/FindPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>FindStudentServlet</display-name>
+        <servlet-name>FindStudentServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.FindStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindStudentServlet</servlet-name>
+        <url-pattern>/FindStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>ChnageStudentInfoServlet</display-name>
+        <servlet-name>ChnageStudentInfoServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.ChnageStudentInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChnageStudentInfoServlet</servlet-name>
+        <url-pattern>/ChnageStudentInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>InsertStudentServlet</display-name>
+        <servlet-name>InsertStudentServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.InsertStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertStudentServlet</servlet-name>
+        <url-pattern>/InsertStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>DeleteStudentServlet</display-name>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.DeleteStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <url-pattern>/DeleteStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>FindStudentServlet2</display-name>
+        <servlet-name>FindStudentServlet2</servlet-name>
+        <servlet-class>yangsenxi.servlet.FindStudentServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindStudentServlet2</servlet-name>
+        <url-pattern>/FindStudentServlet2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>FindStudentServlet3</display-name>
+        <servlet-name>FindStudentServlet3</servlet-name>
+        <servlet-class>yangsenxi.servlet.FindStudentServlet3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindStudentServlet3</servlet-name>
+        <url-pattern>/FindStudentServlet3</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>FindStudentShowChangeServlet</display-name>
+        <servlet-name>FindStudentShowChangeServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.FindStudentShowChangeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindStudentShowChangeServlet</servlet-name>
+        <url-pattern>/FindStudentShowChangeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description></description>
+        <display-name>TurnServlet</display-name>
+        <servlet-name>TurnServlet</servlet-name>
+        <servlet-class>yangsenxi.servlet.TurnServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TurnServlet</servlet-name>
+        <url-pattern>/TurnServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 配置对静态资源的处理 -->
+    
+    <servlet-mapping>
+        
+        <servlet-name>default</servlet-name>
+        
+        <url-pattern>*.css</url-pattern>
+    
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        
+        <servlet-name>default</servlet-name>
+        
+        <url-pattern>*.js</url-pattern>
+    
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        
+        <servlet-name>default</servlet-name>
+        
+        <url-pattern>*.jpg</url-pattern>
+    
+    </servlet-mapping>
+    <servlet-mapping>
+        
+        <servlet-name>default</servlet-name>
+        
+        <url-pattern>*.png</url-pattern>
+    
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,166 @@
+body {
+
+    background-image: -webkit-linear-gradient(60deg, rgba(169, 199, 218, 0.637), rgba(86, 200, 238, 0.904));
+
+    background-position: center 0;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    background-size: cover;
+
+    -webkit-background-size: cover;
+
+    -o-background-size: cover;
+
+    -moz-background-size: cover;
+
+    -ms-background-size: cover;
+
+}
+.login{
+    width: 880px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    margin-top: -200px;
+    display: flex;
+
+}
+
+.left{
+    width: 540px;
+    height: 400px;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    
+}
+
+.right{
+    width: 340px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: white;
+}
+.right h2{
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.right .userinfo{
+    width: 200px;
+    height: 25px;
+    margin: 20px 50px;
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.327);
+    border-radius: 15px;
+    background: url(/img/用户.png) no-repeat 5%;
+    background-size: 20px 20px;
+    opacity: 0.5;
+    box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.327);
+}
+.right .pwdinfo{
+    width: 200px;
+    height: 25px;
+    margin: 20px 50px;
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.327);
+    border-radius: 15px;
+    background: url(/img/密码.png) no-repeat 5%;
+    background-size: 20px 20px;
+    opacity: 0.5;
+    box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.327);
+
+}
+
+.submit{
+    width: 240px;
+    height: 27px;
+    margin: 20px 50px;
+    border: 1px solid #3790ec;
+    border-radius: 15px;
+    background: #3790ec;
+    color: white;
+    font-size: 15px;
+    box-shadow: 1px 2px 3px hsl(220deg, 60%, 50%);
+}
+
+.reset{
+    width: 240px;
+    height: 27px;
+    margin: 10px 50px;
+    border: 1px solid #3790ec;
+    border-radius: 15px;
+    background: #3790ec;
+    color: white;
+    font-size: 15px;
+    box-shadow: 1px 2px 3px hsl(220deg, 60%, 50%);
+}
+
+.conceal{
+    position: absolute;
+    top: 187px;
+    right: 60px;
+    width: 20px;
+    height: 20px;
+    /*background: red;
+    border: solid red 2px;*/
+    background: url(/img/眼睛.png) no-repeat 5%;
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+/*鼠标点击效果*/
+.userinfo:hover{
+    background-color: rgba(128, 128, 128, 0.294);
+}
+
+
+.pwdinfo:hover{
+    background-color: rgba(128, 128, 128, 0.294);
+}
+
+.submit:hover{
+    background-color: #1c71c5;
+}
+
+.reset:hover{
+    background-color: #1c71c5;
+}
+
+/*整体窗口的阴影*/
+.login{
+    box-shadow: 1px 2px 3px rgba(128, 128, 128, 0.327);
+}
+
+/*页面底部信息*/
+hr {
+    height: 100%;
+    width: 1000px;
+    margin-left: calc((100% - 1100px) / 2 + 20px);
+    border:none; 
+    border-bottom:2px solid rgb(4, 131, 210);
+}
+
+.top_content{
+    text-align: center;
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* 可根据需要调整 */
+}
+
+
